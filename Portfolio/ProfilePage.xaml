@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Portfolio;assembly=Portfolio" 
+             x:Class="Portfolio.ProfilePage"
+             BackgroundColor="White">
+    <ContentPage.Resources>
+         <ResourceDictionary>
+        <Style x:Key="StatLabel" TargetType="Label">
+            <Setter Property="HorizontalTextAlignment" Value="Center" />
+        </Style>
+            </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+
+        <ScrollView>
+
+            <Grid ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="AUTO" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="AUTO" />
+                </Grid.RowDefinitions>
+
+                <Image Source="{local:ImageResource Portfolio.Resources.wallpaper.jpg}" Aspect="AspectFill"/>
+                <Image Source="{local:ImageResource Portfolio.Resources.CurvedMask.png}" VerticalOptions="End" Aspect="AspectFill" Margin="0,0,0,-1"/>
+                <local:ImageCircle Source="{local:ImageResource Portfolio.Resources.ProfilePic.jpg}" HeightRequest="100" WidthRequest="100" HorizontalOptions="Center" VerticalOptions="End" Aspect="AspectFill" Margin="0,0,0,-50"/>
+                    
+                <StackLayout Grid.Row="1" HorizontalOptions="Center" Padding="0,50,0,0">
+                    <!-- place holder -->
+                    <Label HorizontalTextAlignment="Center" Text="Kevin Rodzinski" />
+                    <Label HorizontalTextAlignment="Center" Text="Xamarin Certified Developer" Margin="0,-5"/>
+                </StackLayout>
+
+                <Grid Grid.Row="2" ColumnSpacing="0" RowSpacing="0" Margin="0,30">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0">
+                        <Label Text="33" Style="{x:StaticResource StatLabel}" />
+                        <Label Text="Likes" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="1">
+                        <Label Text="234"  Style="{x:StaticResource StatLabel}" />
+                        <Label Text="Followers" />
+                    </StackLayout>
+                    <StackLayout Grid.Column="2">
+                        <Label Text="12"  Style="{x:StaticResource StatLabel}" />
+                        <Label Text="Following" />
+                    </StackLayout>
+                </Grid>
+
+
+            </Grid>
+            
+            
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:local="clr-namespace:Portfolio" 
+             x:Class="Portfolio.PortfolioPage">
+
+    <StackLayout Orientation="Vertical">
+        
+        <Label Margin="15" Text="Welcome to the portfolio!" VerticalOptions="Center" HorizontalOptions="Center" />
+
+        <Grid HorizontalOptions="StartAndExpand">
+            <Grid.RowDefinitions>
+              <RowDefinition Height="*"/>  
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Button Margin="5,5,5,5" Grid.Row="0" Grid.Column="0" BackgroundColor="Gray" 
+                    WidthRequest="200" HorizontalOptions="Center" TextColor="White" 
+                    Clicked="Handle_Clicked" Text="Profile Page Sample"/>
+        </Grid>
+
+    </StackLayout>
+
+</ContentPage>
