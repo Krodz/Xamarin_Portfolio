@@ -7,7 +7,6 @@ namespace Portfolio
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new PortfolioPage());
         }
 

@@ -9,9 +9,14 @@ namespace Portfolio
             InitializeComponent();
         }
 
-        void Handle_Clicked(object sender, System.EventArgs e)
+        void GoToProfilePage(object sender, System.EventArgs e)
         {
             this.Navigation.PushAsync(new ProfilePage());
         }
+
+		void GoToCatalogPage(object sender, System.EventArgs e)
+		{
+            this.Navigation.PushAsync(new CatalogPage());
+		}
     }
 }
